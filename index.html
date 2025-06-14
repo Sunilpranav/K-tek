@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    
+    <style>
+         body{
+            background-image:url(https://www.pixelstalk.net/wp-content/uploads/2016/03/Dark-Blue-background-Abstract.jpg);
+            background-repeat:no-repeat;
+            background-size:cover;
+            object-fit:cover;
+            background-attachment:fixed;
+        }
+        /* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --primary-color: #007BFF;
+    --secondary-color: #0056b3;
+    --background-color: #f4f4f4;
+    --text-color: #333;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Navigation */
+header {
+    background: var(--primary-color);
+    padding: 15px 50px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--white);
+    font-size: 24px;
+    font-weight: 600;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--secondary-color);
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: url('https://source.unsplash.com/1600x900/?technology,pcb') center/cover;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: 600;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero p {
+    font-size: 20px;
+    margin: 15px 0;
+    animation: fadeIn 2.5s ease-in-out;
+}
+
+.cta-button {
+    padding: 12px 24px;
+    font-size: 18px;
+    border: none;
+    background: var(--primary-color);
+    color: var(--white);
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+    background: var(--secondary-color);
+    transform: scale(1.05);
+}
+
+/* Content Sections */
+.content {
+    padding: 80px 50px;
+    text-align: center;
+    background: var(--background-color);
+}
+
+.content h2 {
+    font-size: 36px;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+.content p {
+    font-size: 18px;
+    color: var(--text-color);
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    animation: fadeInUp 2s ease-in-out;
+}
+
+/* Footer */
+footer {
+    background: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 15px;
+    font-size: 20px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .content {
+        padding: 60px 20px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">K TEK computer center</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="abount.html">About</a></li>
+                <li><a href="firstpage1.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="home" class="hero">
+        <h1>Welcome to K TEK computer center</h1>
+        <p>Empowering Future Tech Leaders</p>
+       <button class="cta-button" type="button" onclick="location.href='firstpage1.html'">Learn More</button>
+    </section>
+    <script>
+    function scrollToSection(firstpage1) {
+        const section = document.getElementById(firstpage1);
+        if (section) {
+            section.scrollIntoView({ behavior: "smooth" });
+        } else {
+            console.error("Section not found: " + firstpage1);
+        }
+    }
+    
+    </script>
+    <section id="about" class="content">
+        <h2>About Us</h2>
+        <p>Welcome to "K TEK computer center" We are dedicated to providing quality computer education to help students and professionals enhance their digital skills. we believe in empowering learners with the latest technology skills. Our experienced instructors and modern infrastructure ensure a great learning experience.</p>
+    </section>
+    <section id="services" class="content">
+        <h2>Our Services</h2>
+        <p>To be a leading computer training center that bridges the gap between technology and learning, equipping students with the skills they need to excel in the digital world.</p>
+    </section>
+    <section id="contact" class="content">
+        <h2>Contact Us</h2>
+        <p>Contact:+91 88707 70486<br>Email us at  kteckcsckmd@gmail.com</p>
+    </section>
+    <footer>
+        <p>&copy;  A short tagline about your mission</p>
+    </footer>
+</body>
+</html>

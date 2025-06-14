@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blended Video Backgrounds with Menu</title>
+    <style>
+        nav ul li a {
+    color: #00bfff; /* Light Blue */
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #ffcc00; /* Yellow on hover */
+}
+
+h1, h2 {
+    color: #ff6600; /* Bright Orange */
+}
+
+p {
+    color: #ffffff; /* White for readability */
+}
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            cursor: none; /* Hide default cursor */
+        }
+
+        body {
+            background-color: black;
+            overflow-x: hidden; /* Hide horizontal scrolling */
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        /* Sticky Navbar Styles */
+        nav {
+            position: sticky;
+            top: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7); /* Transparent black background */
+            padding: 1rem;
+            z-index: 1000; /* Ensures navbar stays on top */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav ul li {
+            font-size: 1.2rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #00bfff; /* Light blue hover color */
+        }
+
+        #cursorCanvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+        }
+
+        /* Dynamic background glow effect */
+        #glowEffect {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(0, 191, 255, 0.2), transparent);
+            pointer-events: none;
+            transition: opacity 0.1s ease-out;
+        }
+
+        .container {
+            width: 100vw;
+        }
+
+        .main1 {
+            position: relative;
+            width: 100vw;
+            padding: 2rem;
+            overflow: hidden;
+        }
+
+        .background-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .video-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            width: 90%;
+            max-width: 1200px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .video-container video {
+            width: 40%;
+            height: auto;
+            max-width: 300px;
+            border-radius: 10px;
+        }
+
+        /* Fading Effect */
+        .voverlay {
+            flex: 1;
+            color: white;
+            font-size: 1.5rem;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 1.5rem;
+            border-radius: 10px;
+            opacity: 0;  /* Initially hidden */
+            transform: translateY(30px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        /* Class to trigger fade-in effect */
+        .fade-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .video-container {
+                flex-direction: column;
+            }
+
+            .video-container video {
+                width: 80%;
+            }
+
+            .voverlay {
+                width: 90%;
+                font-size: 1.2rem;
+                padding: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .voverlay {
+                font-size: 1rem;
+                padding: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Menu Bar -->
+    <nav>
+        <div class="logo">
+            <h1>K-Tek</h1>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="abount.html">About</a></li>
+            <li><a href="firstpage1.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <!-- First Section with Background Video -->
+        <div class="main1" id="about">
+            <video class="background-video" autoplay loop muted>
+                <source src="orange.mp4" type="video/mp4">
+            </video>
+
+            <div class="video-container">
+                <div class="voverlay">
+                    <h1><b>About K-Tek Computer Center</b></h1>
+                    <p>
+                        Established in 2003, K-Tek Computer Center has been a trusted name in computer education 
+                        for over two decades. Located in Kodumudi, Tamil Nadu, we provide quality training in various 
+                        computer courses to empower students with the skills required in today's digital world.
+                    </p>
+                </div>
+                <video autoplay loop muted>
+                    <source src="coding.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+
+        <!-- Second Section with Background Video -->
+        <div class="main1" id="services">
+            <video class="background-video" autoplay loop muted>
+                <source src="violet.mp4" type="video/mp4">
+            </video>
+
+            <div class="video-container">
+                <video autoplay loop muted>
+                    <source src="meeting.mp4" type="video/mp4">
+                </video>
+                <div class="voverlay">
+                    <h2>Why Choose K-Tek?</h2>
+                    <p>
+                        ✔ Comprehensive training in essential computer skills<br>
+                        ✔ Hands-on learning with real-world projects<br>
+                        ✔ Certification upon course completion<br>
+                    </p>
+                    <p><strong>Enroll now and unlock endless opportunities in the digital world!</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Third Section (Contact, etc.) -->
+        <div class="main1" id="contact">
+            <!-- Add content here for Contact or other sections -->
+            <h2 style="text-align: center; color: white;">Contact Us</h2>
+            <p style="text-align: center; color: white;"> kteckcsckmd@gmail.com<br> A short tagline about your mission</p>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to trigger fade-in effect
+        document.addEventListener("DOMContentLoaded", function() {
+            let observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("fade-in");
+                        observer.unobserve(entry.target);  // Remove observer after animation
+                    }
+                });
+            }, { threshold: 0.3 }); // 30% of the element visible triggers animation
+
+            // Observe all voverlay elements
+            document.querySelectorAll(".voverlay").forEach(el => observer.observe(el));
+        });
+    </script>
+
+    <div id="glowEffect"></div>
+    <canvas id="cursorCanvas"></canvas>
+
+    <script>
+        const canvas = document.getElementById("cursorCanvas");
+        const ctx = canvas.getContext("2d");
+        const glowEffect = document.getElementById("glowEffect");
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        let positions = [];
+
+        window.addEventListener("resize", () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+
+        document.addEventListener("mousemove", (e) => {
+            positions.push({ x: e.clientX, y: e.clientY });
+
+            if (positions.length > 25) {
+                positions.shift();
+            }
+
+            // Move the background glow effect
+            glowEffect.style.background = `radial-gradient(circle at ${e.clientX}px ${e.clientY}px, rgba(0, 191, 255, 0.4), black)`;
+        });
+
+        function drawTrail() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Neon core line (blue)
+            ctx.beginPath();
+            ctx.lineWidth = 5;
+            ctx.lineCap = "round";
+            ctx.shadowBlur = 15;
+            ctx.shadowColor = "rgba(0, 191, 255, 0.8)"; // Blue shadow
+
+            for (let i = 0; i < positions.length - 1; i++) {
+                let opacity = (i + 1) / positions.length;
+                ctx.strokeStyle = `rgba(0, 191, 255, ${opacity})`; // Blue neon line
+                ctx.moveTo(positions[i].x, positions[i].y);
+                ctx.lineTo(positions[i + 1].x, positions[i + 1].y);
+            }
+            ctx.stroke();
+
+            // Light Blue Border (light blue color)
+            ctx.beginPath();
+            ctx.lineWidth = 7;
+            ctx.strokeStyle = `rgba(173, 216, 230, 0.6)`; // Light Blue Border
+            ctx.shadowBlur = 0;
+
+            for (let i = 0; i < positions.length - 1; i++) {
+                ctx.moveTo(positions[i].x, positions[i].y);
+                ctx.lineTo(positions[i + 1].x, positions[i + 1].y);
+            }
+            ctx.stroke();
+
+            requestAnimationFrame(drawTrail);
+        }
+
+        drawTrail();
+    </script>
+
+</body>
+</html>

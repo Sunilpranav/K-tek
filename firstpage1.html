@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.min.js"></script>
+    <script defer src="main.js"></script>
+    <title>Course_page</title>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: #333;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+            background-image:url(https://media.istockphoto.com/id/1130549719/vector/abstract-technology-network-structure-background-futuristic-plexus-effect-computer-geometric.jpg?s=612x612&w=0&k=20&c=4h9Tt-DJJWm83QientMba7bhbvd6r6CJUgWSR-RLemE=);
+            background-repeat:no-repeat;
+            background-size:cover;
+            object-fit:cover;
+            background-attachment:fixed;
+
+        }
+        header {
+            background-color: #004080;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+        }
+        nav {
+            background-color: #002a5c;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #f0f0f0;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #ffcc00;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+        .content h1 {
+            color:#009879;
+            font-size: 32px;
+        }
+        .content p {
+            color: #E3D2C3;
+            font-size: 18px;
+        }
+        .bottom{     
+            background: rgb(98, 98, 138); font-family: calibri;
+            border-radius:40px;
+            color:white;            
+            font-size:20px;
+            font-weight:600;
+        }
+        .table{
+            background:#EAEAEA;
+            width:900px;
+            height:700px;
+            margin-left:15%;
+            border-radius:40px;
+            border:#E3D2C3 50px solid;
+            display:flex;
+            align-items: center;
+            
+        }
+        .content-table{
+            border-collapse:collapce;
+            margin-left:20%;
+            font-size:0.7cm;
+            min-width:400px;
+            border-radius:5px 5px 0 0;
+            overflow:hidden;
+            box-shadow:0 0 20px rgba(0,0,0,0.15);
+        }
+        .content-table thead tr{
+            background-color:#009879;
+            color:#ffffff;
+            text-align:left;
+            font-weight:bold;
+        }
+        .content-table th,
+        .content-table td{
+            padding:12px 15px;
+        } 
+        .content-table tbody tr{
+            border-bottom:1px solid #ddd;
+        }
+        .content-table tbody tr:nth-of-type(even)
+        {
+            background-color:#f3f3f3;
+        }
+        .content-table tbody tr:last-of-type{
+            border-bottom:2px solid #009870;
+        }
+        .content-table tbody tr.active-row{
+            font-weight:bold;
+            color:#009879;
+        }
+        #course{
+            color:red;
+            font-size: 30px;
+        }
+        #fees{
+            color:red;
+            font-size: 30px;
+        }
+        footer {
+            background-color: #002a5c;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        K Tek - Innovating the Future
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="abount.html">About</a>
+        <a href="firstpage1.html">Services</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div class="content">
+        <h1>Welcome to K Tek</h1>
+        <p>Your trusted partner in technology and innovation.</p>
+    </div>
+    <h2  id="course">Course Details</h2>
+    <section class="section__slider">
+        <div class="container__center">
+         <div class="swiper-container">
+          <div class="swiper-wrapper">
+           <div class="swiper-slide">
+            <div class="swiper-slide__block">
+             <div class="swiper-slide__block__img" data-swiper-parallax-y="70%">
+              <a href="firstpage1.html">
+               <img src="https://www.shutterstock.com/image-illustration/c-abstract-concept-blue-text-260nw-679071949.jpg" alt="">
+              </a>
+             </div>
+             <div class="swiper-slide__block__text">
+              <p data-swiper-parallax-x="-60%" class="main__title">C-Programming<br>
+                                           <span>Why Learn C?</span>
+                                       </p>
+              <h3 data-swiper-parallax-x="-50%" class="main__subtitle">tagline
+                                                                   <span>Course Outline</span><br><ol><li>Introduction to C</li>
+                                                                   <li>Data Types and Variables</li>
+                                                                   <li>Control Statements</li>
+                                                                   <li>Functions and Recursion</li>
+                                                                   <li>Pointers and Memory Management</li>
+                                                                   <li>Structures and File Handling</li></ol>
+                                       </h3>
+              <p data-swiper-parallax-x="-40%" class="paragraphe">The foundation of programming with C – the mother of all languages!</p>
+              <a data-swiper-parallax-x="-30%" class="link" target="_blank" href="cpro.html">Click:To learn</a>
+              <span data-swiper-parallax-y="60%" class="number">1</span>
+             </div>
+            </div>
+           </div>
+           <div class="swiper-slide">
+            <div class="swiper-slide__block">
+             <div class="swiper-slide__block__img" data-swiper-parallax-y="70%">
+              <a  href="firstpage1.html">
+               <img src="https://www.shutterstock.com/image-illustration/c-plus-abstract-concept-blue-260nw-528261487.jpg" alt="">
+              </a>
+             </div>
+             <div class="swiper-slide__block__text">
+              <h2 data-swiper-parallax-x="-60%" class="main__title">C++-Programming<br>
+                                           <span>Why Learn C++?</span>
+                                       </h2>
+              <h3 data-swiper-parallax-x="-50%" class="main__subtitle">Tagline 
+                                           <span>Course Outline</span><ol>
+                                            <li>Variables, Constants & Data Types,Input/Output (cin, cout)</li>
+                                            <li>Function Definition and Call</li>
+                                            <li>Function Overloading</li>
+                                            <li>Default Arguments & Inline Functions</li>
+                                            <li>Recursion</li>
+                                           </ol>
+                                       </h3>
+              <p data-swiper-parallax-x="-40%" class="paragraphe">C++ is the backbone of high-performance applications – master it today!</p>
+              <a data-swiper-parallax-x="-30%" style="z-index: 5;" class="link" target="_blank" href="c++.html">Click:To learn</a>
+              <span data-swiper-parallax-y="60%" class="number">2</span>
+             </div>
+            </div>
+           </div>
+           <div class="swiper-slide">
+            <div class="swiper-slide__block">
+             <div class="swiper-slide__block__img" data-swiper-parallax-y="70%">
+              <a href="firstpage1.html">
+               <img src="https://st2.depositphotos.com/4021139/5820/i/450/depositphotos_58200097-stock-photo-java-concept.jpg" alt="">
+              </a>
+             </div>
+             <div class="swiper-slide__block__text">
+              <h2 data-swiper-parallax-x="-60%" class="main__title">Java Programming<br>
+                                           <span>Why Learn Java?</span>
+                                       </h2>
+              <h3 data-swiper-parallax-x="-50%" class="main__subtitle">Tagline
+                                           <span>Course Outline</span><ol>
+                                            <li>Data Types & Variables, Operators (Arithmetic, Logical, Bitwise)</li>
+                                            <li>Input/Output (Scanner, BufferedReader)</li>
+                                            <li>Conditional Statements (if, else, switch-case)</li>
+                                            <li>Loops (for, while, do-while)</li>
+                                            <li>Functions & Methods</li>
+                                            <li>Object-Oriented Programming (OOP)</li>
+                                            <li>Arrays & Strings</li>
+                                           </ol>
+                                       </h3>
+              <p data-swiper-parallax-x="-40%" class="paragraphe">Java’s ‘Write Once, Run Anywhere’ feature makes it a must-learn for future developers!</p>
+              <a data-swiper-parallax-x="-30%" class="link" target="_blank" href="java.html">Click:To learn</a>
+              <span data-swiper-parallax-y="60%" class="number">3</span>
+             </div>
+            </div>
+           </div>
+           <div class="swiper-slide">
+            <div class="swiper-slide__block">
+             <div class="swiper-slide__block__img" data-swiper-parallax-y="70%">
+              <a  href="firstpage1.html">
+               <img src="https://c8.alamy.com/comp/2FMKF36/python-programming-language-application-development-coding-internet-technology-concept-2FMKF36.jpg" alt="">
+              </a>
+             </div>
+             <div class="swiper-slide__block__text">
+              <p data-swiper-parallax-x="-60%" class="main__title">Python-Programming<br>
+                                           <span>Why Learn Python?</span>
+                                       </p>
+              <h3 data-swiper-parallax-x="-50%" class="main__subtitle">
+                                                                   <span>Course Outline</span><ol>
+                                                                    <li>Variables & Data Types,Operators (Arithmetic, Logical, Bitwise)</li>
+                                                                    <li>Input/Output Functions</li>
+                                                                    <li>Conditional Statements (if, elif, else),Loops (for, while)</li>
+                                                                    <li>Functions & Modules</li>
+                                                                    <li>Data Structures in Python(Lists & List Comprehensions,Tuples & Tuple Operations)</li>
+                                                                    <li>String Handling</li>
+                                                                   </ol>
+                                       </h3>
+              <p data-swiper-parallax-x="-40%" class="paragraphe">Python is simple yet powerful – a perfect choice for beginners and professionals!</p>
+              <a data-swiper-parallax-x="-30%" class="link" target="_blank" href="python.html">Click:To learn</a>
+              <span data-swiper-parallax-y="60%" class="number">4</span>
+             </div>
+            </div>
+           </div>
+           <div class="swiper-slide">
+            <div class="swiper-slide__block">
+             <div class="swiper-slide__block__img" data-swiper-parallax-y="70%">
+              <a href="firstpage1.html">
+               <img src="https://verpex.com/assets/uploads/images/blog/Basic-HTML-Codes-for-Websites.webp?v=1691760654" alt="">
+              </a>
+             </div>
+             <div class="swiper-slide__block__text">
+              <p data-swiper-parallax-x="-60%" class="main__title">HTML<br>
+                                           <span>Why Learn HTML?</span>
+                                       </p>
+              <h3 data-swiper-parallax-x="-50%" class="main__subtitle">
+                                                                   <span>Course Outline</span><ol>
+                                                                    <li>Introduction to HTML</li>
+                                                                    <li>HTML Elements & Attributes(Headings, Paragraphs, and Line Breaks)</li>
+                                                                    <li>Working with Links & Images</li>
+                                                                    <li>Lists & Tables</li>
+                                                                    <li>Semantic HTML</li>
+                                                                   </ol>
+                                       </h3>
+              <p data-swiper-parallax-x="-40%" class="paragraphe">HTML (HyperText Markup Language) is the building block of every website. HTML is the first step in web development – start coding today!</p>
+              <a data-swiper-parallax-x="-30%" class="link" target="_blank" href="#">Click:To learn</a>
+              <span data-swiper-parallax-y="60%" class="number">5</span>
+             </div>
+            </div>
+           </div>
+           <div class="swiper-slide">
+            <div class="swiper-slide__block">
+             <div class="swiper-slide__block__img" data-swiper-parallax-y="70%">
+              <a href="firstpage1.html">
+               <img src="https://play-lh.googleusercontent.com/TxjQBGYHvMJsBX5dCvxQ4R-_4N-XrVhW6-p7D7TXanXKZMD8L-UkeMBWO1dtubGVNqU" alt="">
+              </a>
+             </div>
+             <div class="swiper-slide__block__text">
+              <p data-swiper-parallax-x="-60%" class="main__title">CSS<br>
+                                           <span>Why Learn CSS?</span>
+                                       </p>
+              <h3 data-swiper-parallax-x="-50%" class="main__subtitle">
+                                                                   <span>Course Outline</span><ol>
+                                                                    <li> Introduction to CSS</li>
+                                                                    <li>CSS Selectors & Properties</li>
+                                                                    <li>Colors & Backgrounds</li>
+                                                                    <li> CSS Box Model</li>
+                                                                    <li> Flexbox & Grid System</li>
+                                                                    <li>Typography & Text Styling</li>
+                                                                   </ol>
+                                       </h3>
+              <p data-swiper-parallax-x="-40%" class="paragraphe">CSS (Cascading Style Sheets) is essential for designing and styling web pages. CSS brings life to web pages – make your designs stand out!</p>
+              <a data-swiper-parallax-x="-30%" class="link" target="_blank" href="html.css">Click:To learn</a>
+              <span data-swiper-parallax-y="60%" class="number">6</span>
+             </div>
+            </div>
+           </div>
+           <div class="swiper-slide">
+            <div class="swiper-slide__block">
+             <div class="swiper-slide__block__img" data-swiper-parallax-y="70%">
+              <a href="firstpage1.html">
+               <img src="https://cdn.investintech.com/wp-content/uploads/2021/07/A-Beginners-Guide-to-Microsoft-Office.jpg" alt="">
+              </a>
+             </div>
+             <div class="swiper-slide__block__text">
+              <p data-swiper-parallax-x="-60%" class="main__title">Microsoft Office<br>
+                                           <span>Why Learn Microsoft office?</span>
+                                       </p>
+              <h3 data-swiper-parallax-x="-50%" class="main__subtitle">
+                                                                   <span>Course Outline</span><ol>
+                                                                    <li>Introduction to Microsoft Offic</li>
+                                                                    <li>Getting Started with MS Word</li>
+                                                                    <li>Microsoft Excel (MS Excel)</li>
+                                                                    <li>Microsoft PowerPoint (MS PowerPoint)</li>
+                                                                    <li>Microsoft Access (MS Access - Optional)</li>
+                                                                   </ol>
+                                       </h3>
+              <p data-swiper-parallax-x="-40%" class="paragraphe">Microsoft Office is the most widely used office software suite in businesses, schools, and organizations worldwide. MS Office skills are a must-have for students, professionals, and business owners!</p>
+              <a data-swiper-parallax-x="-30%" class="link" target="_blank" href="ms.html">Click:To learn</a>
+              <span data-swiper-parallax-y="60%" class="number">7</span>
+             </div>
+            </div>
+           </div>
+           <div class="swiper-slide">
+            <div class="swiper-slide__block">
+             <div class="swiper-slide__block__img" data-swiper-parallax-y="70%">
+              <a href="firstpage1.html">
+               <img src="https://dotnetinstitute.co.in/wp-content/uploads/2021/02/Complete-details-about-the-DCA-computer-course.jpg" alt="">
+              </a>
+             </div>
+             <div class="swiper-slide__block__text">
+              <p data-swiper-parallax-x="-60%" class="main__title">COA and DCA<br>
+                                           <span>Why Learn COA and DCA?</span>
+                                       </p>
+              <h3 data-swiper-parallax-x="-50%" class="main__subtitle">
+                                                                   <span>Course Outline</span><ol>
+                                                                    <li>Microsoft Office Suite</li>
+                                                                    <li>Programming Basics</li>
+                                                                    <li>Tally & Accounting Software</li>
+                                                                    <li>Introduction to Computer Organization</li>
+                                                                    <li>Memory Organization</li>
+                                                                    <li></li>
+                                                                   </ol>
+                                       </h3>
+              <p data-swiper-parallax-x="-40%" class="paragraphe">DCA is a comprehensive diploma program designed to provide in-depth knowledge of computer applications and IT fundamentals.COA is an essential certification for professionals, students, and business owners who want to improve their office automation skills and boost workplace efficiency.</p>
+              <a data-swiper-parallax-x="-30%" class="link" target="_blank" href="coa.html">Click:To learn</a>
+              <span data-swiper-parallax-y="60%" class="number">8</span>
+             </div>
+            </div>
+           </div>
+           <div class="swiper-slide">
+            <div class="swiper-slide__block">
+             <div class="swiper-slide__block__img" data-swiper-parallax-y="70%">
+              <a href="firstpage1.html">
+               <img src="https://c8.alamy.com/comp/2XJMY7F/stuttgart-germany-12-30-2022-smartphone-with-logo-of-software-company-tally-solutions-pvt-ltd-on-screen-in-front-of-business-website-focus-on-2XJMY7F.jpg" alt="">
+              </a>
+             </div>
+             <div class="swiper-slide__block__text">
+              <p data-swiper-parallax-x="-60%" class="main__title">Tally<br>
+                                           <span>Why Learn Tally?</span>
+                                       </p>
+              <h3 data-swiper-parallax-x="-50%" class="main__subtitle">
+                                                                   <span>Course Outline</span><ol>
+                                                                    <li> Introduction to Tally</li>
+                                                                    <li>Basics of Accounting</li>
+                                                                    <li>Types of Accounts & Transactions</li>
+                                                                    <li>Reports & Financial Statements</li>
+                                                                    <li>Fundamental Accounting Concepts</li>
+                                                                   </ol>
+                                       </h3>
+              <p data-swiper-parallax-x="-40%" class="paragraphe">Tally is an essential skill for accountants, business owners, and finance professionals!</p>
+              <a data-swiper-parallax-x="-30%" class="link" target="_blank" href="tally.html">Click:To learn</a>
+              <span data-swiper-parallax-y="60%" class="number">9</span>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="swiper-button-next">
+           <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+          </div>
+          <div class="swiper-button-prev">
+           <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+          </div>
+         </div>
+        </div>
+       </section>
+ </div>
+ <h2 id="fees">Course Fees</h2>
+ <div class="table">
+    <table class="content-table">
+         <thead>
+            <tr>
+                <th>S.No</th><th>Course Name</th><th>Duration</th><th>Fees</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td><td>c</td><td>2 Month</td><td>₹2000</td>
+            </tr>
+            <tr class="active-row">
+                <td>2</td><td>c++</td><td>2 Month</td><td>₹2000</td>
+            </tr>
+            <tr>
+                <td>3</td><td>Java</td><td>2 Month</td><td>₹2000</td>
+            </tr>
+            <tr class="active-row">
+                <td>4</td><td>python</td><td>2 Month</td><td>₹2000</td>
+            </tr>
+            <tr>
+                <td>5</td><td>Ms Office</td><td>2 Month</td><td>₹2000</td>
+            </tr>
+            <tr class="active-row">
+                <td>6</td><td>HTML</td><td>2 Month</td><td>₹2000</td>
+            </tr>
+            <tr>
+                <td>7</td><td>CSS</td><td>2 Month</td><td>₹2000</td>
+            </tr>
+            <tr class="active-row">
+                <td>8</td><td>Tally</td><td>2 Month</td><td>₹2000</td>
+            </tr>
+            <tr>
+                <td>9</td> <td>COA</td><td>2 Month</td><td>₹2000</td>
+            </tr>
+            <tr class="active-row">
+                <td>10</td> <td>DCA</td><td>2 Month</td><td>₹2000</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+    <footer>
+        &copy; 2025 K Tek. All rights reserved.
+    </footer>
+</body>
+</html>

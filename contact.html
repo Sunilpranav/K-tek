@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | K TEK Computer Center</title>
+    <link rel="stylesheet" href="contact.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js" > </script>
+            <script type="text/javascript">
+              (function() {
+              emailjs.init("QnR6Ni70Dgq0pMYMH");
+              })()
+            ; 
+    </script>
+    <style>/* Import Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        
+        /* Navigation Bar */
+        header {
+            background: #1a1a1a;
+            padding: 15px 0;
+            text-align: center;
+        }
+        
+        nav .logo {
+            color: #ff9800;
+            font-size: 26px;
+            font-weight: 700;
+        }
+        
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0;
+        }
+        
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: #ff9800;
+        }
+        
+        nav ul li a.active {
+            border-bottom: 2px solid #ff9800;
+        }
+        
+        /* Contact Section */
+        .contact {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(to right, #ff9800, #ff5722);
+            color: white;
+        }
+        
+        .contact h1 {
+            font-size: 40px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .contact p {
+            font-size: 18px;
+            font-weight: 300;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Contact Container */
+        .contact-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        /* Contact Form */
+        .contact-form {
+            background: white;
+            padding: 25px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            max-width: 400px;
+            width: 100%;
+            color: #333;
+            animation: fadeIn 1s ease-in-out;
+        }
+        
+        .contact-form h2 {
+            margin-bottom: 15px;
+            color: #222;
+            font-size: 22px;
+            font-weight: 600;
+        }
+        
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: #ff9800;
+            box-shadow: 0 0 8px rgba(255, 152, 0, 0.5);
+        }
+        
+        .contact-form button {
+            background: #ff9800;
+            color: white;
+            border: none;
+            padding: 14px;
+            font-size: 16px;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-weight: 600;
+        }
+        
+        .contact-form button:hover {
+            background: #e68a00;
+        }
+        
+        /* Contact Details */
+        .contact-details {
+            background: white;
+            padding: 25px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            max-width: 400px;
+            width: 100%;
+            color: #333;
+            animation: slideIn 1s ease-in-out;
+        }
+        
+        .contact-details h2 {
+            margin-bottom: 15px;
+            font-size: 22px;
+            font-weight: 600;
+            color: #222;
+        }
+        
+        .contact-details p {
+            font-size: 16px;
+            margin: 8px 0;
+            font-weight: 400;
+        }
+        
+        /* Social Media Icons */
+        .social-icons {
+            margin-top: 10px;
+        }
+        
+        .social-icons a img {
+            width: 30px;
+            margin: 0 5px;
+            transition: 0.3s;
+        }
+        
+        .social-icons a img:hover {
+            transform: scale(1.1);
+        }
+        
+        /* Google Map */
+        .map {
+            margin-top: 30px;
+        }
+        
+        .map h2 {
+            margin-bottom: 10px;
+            font-size: 24px;
+            font-weight: 600;
+        }
+        
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">K TEK</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="abount.html">About</a></li>
+                <li><a href="firstpage1.html">Services</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contact">
+        <h1>Contact Us</h1>
+        <p>We'd love to hear from you! Reach out to us for any inquiries.</p>
+        
+        <div class="contact-container">
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <h2>Send us a Message</h2>
+                <form action="submit_form.php" method="POST">
+                    <label for="name"></label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    <label for="email"></label>
+                    <input type="email" id="email"name="email" placeholder="Your Email" required>
+                    <label for="message"></label>
+                    <textarea name="message" id="message" placeholder="Your Message" rows="5" required></textarea>
+                    <button onclick="sendemail()" type="button">Send Message</button>
+                </form>
+            </div>
+           
+
+            <!-- Contact Details -->
+            <div class="contact-details">
+                <h2>Get in Touch</h2>
+                <p><strong>Address:</strong>-----------</p>
+                <p><strong>Phone:</strong> +91 88707 70486</p>
+                <p><strong>Email:</strong> kteckcsckmd@gmail.com</p>
+                <p><strong>Working Hours:</strong> Mon - Fri (9:00 AM - 6:00 PM)</p>
+
+                <!-- Social Media Links -->
+                <div class="social-icons">
+                    <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+                    <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+                    <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Google Map -->
+        <div class="map">
+            <h2>Find Us</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3915.482896095295!2d77.88370477409147!3d11.077342553573173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba980345d2ee6ed%3A0x660699f13da4009e!2sK%20TEK%20Computer%20Education!5e0!3m2!1sen!2sin!4v1743089410111!5m2!1sen!2sin" width="1000" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+    <script>
+                            
+        function sendemail(){
+
+        var email=document.getElementById("email").value;
+        var from_name=document.getElementById("name").value;
+        var message=document.getElementById("message").value;
+
+        var templateParams = {
+            to_name:name,
+            email:email,
+            message:message
+        };
+
+        emailjs.send('service_j1hydwq', 'template_byt82pn', templateParams)
+        .then(function(response) {
+        console.log('SUCCESS!', response.status, response.text);
+        window.alert("Sent successfully!");
+        
+        })
+        }
+    </script>
+
+    <footer>
+        <p>&copy;  A short tagline about your mission.</p>
+    </footer>
+</body>
+</html>
