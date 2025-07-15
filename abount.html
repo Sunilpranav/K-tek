@@ -6,23 +6,23 @@
     <title>Blended Video Backgrounds with Menu</title>
     <style>
         nav ul li a {
-    color: #00bfff; /* Light Blue */
-    text-decoration: none;
-    transition: color 0.3s ease;
-    font-weight: bold;
-}
+            color: #00bfff; /* Light Blue */
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-weight: bold;
+        }
 
-nav ul li a:hover {
-    color: #ffcc00; /* Yellow on hover */
-}
+        nav ul li a:hover {
+            color: #ffcc00; /* Yellow on hover */
+        }
 
-h1, h2 {
-    color: #ff6600; /* Bright Orange */
-}
+        h1, h2 {
+            color: #ff6600; /* Bright Orange */
+        }
 
-p {
-    color: #ffffff; /* White for readability */
-}
+        p {
+            color: #ffffff; /* White for readability */
+        }
 
         * {
             margin: 0;
@@ -236,11 +236,13 @@ p {
 
         <!-- Third Section (Contact, etc.) -->
         <div class="main1" id="contact">
-            <!-- Add content here for Contact or other sections -->
             <h2 style="text-align: center; color: white;">Contact Us</h2>
             <p style="text-align: center; color: white;"> kteckcsckmd@gmail.com<br> A short tagline about your mission</p>
         </div>
     </div>
+
+    <div id="glowEffect"></div>
+    <canvas id="cursorCanvas"></canvas>
 
     <script>
         // JavaScript to trigger fade-in effect
@@ -257,12 +259,8 @@ p {
             // Observe all voverlay elements
             document.querySelectorAll(".voverlay").forEach(el => observer.observe(el));
         });
-    </script>
 
-    <div id="glowEffect"></div>
-    <canvas id="cursorCanvas"></canvas>
-
-    <script>
+        // Neon cursor effect for both mouse and touch
         const canvas = document.getElementById("cursorCanvas");
         const ctx = canvas.getContext("2d");
         const glowEffect = document.getElementById("glowEffect");
@@ -277,15 +275,34 @@ p {
             canvas.height = window.innerHeight;
         });
 
+        // Handle mouse movement
         document.addEventListener("mousemove", (e) => {
             positions.push({ x: e.clientX, y: e.clientY });
-
             if (positions.length > 25) {
                 positions.shift();
             }
-
             // Move the background glow effect
             glowEffect.style.background = `radial-gradient(circle at ${e.clientX}px ${e.clientY}px, rgba(0, 191, 255, 0.4), black)`;
+        });
+
+        // Handle touch start and move
+        document.addEventListener("touchstart", (e) => {
+            e.preventDefault(); // Prevent default touch behavior like scrolling
+            const touch = e.touches[0];
+            positions.push({ x: touch.clientX, y: touch.clientY });
+            if (positions.length > 25) {
+                positions.shift();
+            }
+            glowEffect.style.background = `radial-gradient(circle at ${touch.clientX}px ${touch.clientY}px, rgba(0, 191, 255, 0.4), black)`;
+        });
+
+        document.addEventListener("touchmove", (e) => {
+            const touch = e.touches[0];
+            positions.push({ x: touch.clientX, y: touch.clientY });
+            if (positions.length > 25) {
+                positions.shift();
+            }
+            glowEffect.style.background = `radial-gradient(circle at ${touch.clientX}px ${touch.clientY}px, rgba(0, 191, 255, 0.4), black)`;
         });
 
         function drawTrail() {
@@ -306,7 +323,7 @@ p {
             }
             ctx.stroke();
 
-            // Light Blue Border (light blue color)
+            // Light Blue Border
             ctx.beginPath();
             ctx.lineWidth = 7;
             ctx.strokeStyle = `rgba(173, 216, 230, 0.6)`; // Light Blue Border
@@ -323,6 +340,5 @@ p {
 
         drawTrail();
     </script>
-
 </body>
 </html>
